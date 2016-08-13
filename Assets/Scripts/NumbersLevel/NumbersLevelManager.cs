@@ -6,7 +6,9 @@ public class NumbersLevelManager : MonoBehaviour {
 
     int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     public GameObject[] numbersPanels;
-    public Text RightNumber;
+    public Text RightNumberText;
+    int RightNumber=-1;
+    public int numberSelected;
 
     public static void Shuffle(int[] vector) //shuffle int vector randomly 
     {
@@ -43,6 +45,18 @@ public class NumbersLevelManager : MonoBehaviour {
         setRightNumber();
     }
 
+    public void checkSelected() {
+        if (numberSelected==RightNumber)
+        {
+            Debug.Log("Bien");
+            setRightNumber();
+        }
+        else
+        {
+            Debug.Log("Mal");
+        }
+    }
+
     void ReWritePanels() {
         for (int i = 0; i < numbers.Length; i++)
         {
@@ -51,7 +65,24 @@ public class NumbersLevelManager : MonoBehaviour {
     }
 
     public void setRightNumber() {
-        RightNumber.text = Random.Range(0, 10).ToString();
+        if (RightNumber!=-1)
+        {
+            bool diferente = false;
+            while (!diferente)
+            {
+                int newNumber = Random.Range(0, 10);
+                if (newNumber!=RightNumber)
+                {
+                    RightNumber = newNumber;
+                    diferente = true;
+                }
+            }
+        }
+        else
+        {
+            RightNumber = Random.Range(0, 10);
+        }
+        RightNumberText.text = RightNumber.ToString();
     }
 
     // Update is called once per frame

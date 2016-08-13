@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\ColorsLevel\CreateColors.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\Draw.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\NumbersLevel\Number.cs" />
     <Compile Include="Assets\Scripts\NumbersLevel\NumbersLevelManager.cs" />
     <Compile Include="Assets\Scripts\Others\SceneViewWindow.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
