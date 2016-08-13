@@ -36,7 +36,7 @@ public class Drag : MonoBehaviour
                 case "cube":
                     Manager.CubesLeft--;
                     break;
-                case "start":
+                case "star":
                     Manager.StarsLeft--;
                     break;
                 case "rombo":

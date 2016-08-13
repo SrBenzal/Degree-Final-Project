@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -74,6 +68,7 @@
     <Compile Include="Assets\Scripts\ColorsLevel\CreateColors.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\Draw.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\NumbersLevel\NumbersLevelManager.cs" />
     <Compile Include="Assets\Scripts\Others\SceneViewWindow.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShapes.cs" />
