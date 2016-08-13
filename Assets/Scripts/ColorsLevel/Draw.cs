@@ -12,7 +12,6 @@ public class Draw : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		selected = true;
-		Debug.Log ("SS");
 	}
 
 	void OnTriggerExit(Collider other) {

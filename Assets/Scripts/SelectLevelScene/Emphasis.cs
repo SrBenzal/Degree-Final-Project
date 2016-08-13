@@ -10,7 +10,6 @@ public class Emphasis : MonoBehaviour {
 		panels = new GameObject[transform.childCount];
 		for (int i = 0; i < transform.childCount; i++) {
 			panels [i] = transform.GetChild (i).gameObject;
-			Debug.Log (panels [i].name);
 		}
 	}
 	
