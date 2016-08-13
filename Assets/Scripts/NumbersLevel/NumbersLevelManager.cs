@@ -80,7 +80,7 @@ public class NumbersLevelManager : MonoBehaviour {
         }
         else
         {
-            RightNumber = Random.Range(0, 10);
+            RightNumber = Random.Range(0, numbers.Length);
         }
         RightNumberText.text = RightNumber.ToString();
     }

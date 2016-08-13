@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AnimalsLevel\Animals.cs" />
+    <Compile Include="Assets\Scripts\AnimalsLevel\AnimalsLevelManager.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\Colors.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\ColorsLevelManager.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\CreateColors.cs" />
