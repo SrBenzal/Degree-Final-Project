@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\ColorsLevel\Draw.cs" />
      <Compile Include="Assets\Scripts\ColorsLevel\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerShapes.cs" />
      <Compile Include="Assets\Scripts\SelectLevelScene\Emphasis.cs" />
      <Compile Include="Assets\Scripts\SelectLevelScene\LoadScene.cs" />
  <Reference Include="UnityEngine.UI">
