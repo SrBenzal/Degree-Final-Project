@@ -15,6 +15,7 @@ public class CreateColors : MonoBehaviour {
 		colors [4] = new Color (1f, 0.55f, 0f); //Orange
 		colors [5] = Color.magenta;
 		colors [6] = new Color(0.54f,0.27f,0.17f); //Brown
+		colors [7] = Color.white;
 		paintBalls();
 	}
 
