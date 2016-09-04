@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: d9fd64ff136c53c4faeb3face84e2c70
+timeCreated: 1472987981
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cloud
+    100002: Cloud 1
+    100004: Cloud001
+    100006: Cloud002
+    100008: DoorLeft
+    100010: DoorRight
+    100012: FrameDoor
+    100014: Grass
+    100016: Inside
+    100018: Lake
+    100020: //RootNode
+    100022: LittleHouseRoof
+    100024: LittleHouseWallFront
+    100026: LittleHouseWallSide
+    100028: LittleHouseWindow
+    100030: Mountains
+    100032: Plane001
+    100034: RoofFront
+    100036: RoofSide
+    100038: Sky
+    100040: WallFront
+    100042: WallSide
+    100044: Window
+    400000: Cloud
+    400002: Cloud 1
+    400004: Cloud001
+    400006: Cloud002
+    400008: DoorLeft
+    400010: DoorRight
+    400012: FrameDoor
+    400014: Grass
+    400016: Inside
+    400018: Lake
+    400020: //RootNode
+    400022: LittleHouseRoof
+    400024: LittleHouseWallFront
+    400026: LittleHouseWallSide
+    400028: LittleHouseWindow
+    400030: Mountains
+    400032: Plane001
+    400034: RoofFront
+    400036: RoofSide
+    400038: Sky
+    400040: WallFront
+    400042: WallSide
+    400044: Window
+    2300000: Cloud
+    2300002: Cloud 1
+    2300004: Cloud001
+    2300006: Cloud002
+    2300008: DoorLeft
+    2300010: DoorRight
+    2300012: FrameDoor
+    2300014: Grass
+    2300016: Inside
+    2300018: Lake
+    2300020: LittleHouseRoof
+    2300022: LittleHouseWallFront
+    2300024: LittleHouseWallSide
+    2300026: LittleHouseWindow
+    2300028: Mountains
+    2300030: Plane001
+    2300032: RoofFront
+    2300034: RoofSide
+    2300036: Sky
+    2300038: WallFront
+    2300040: WallSide
+    2300042: Window
+    3300000: Cloud
+    3300002: Cloud 1
+    3300004: Cloud001
+    3300006: Cloud002
+    3300008: DoorLeft
+    3300010: DoorRight
+    3300012: FrameDoor
+    3300014: Grass
+    3300016: Inside
+    3300018: Lake
+    3300020: LittleHouseRoof
+    3300022: LittleHouseWallFront
+    3300024: LittleHouseWallSide
+    3300026: LittleHouseWindow
+    3300028: Mountains
+    3300030: Plane001
+    3300032: RoofFront
+    3300034: RoofSide
+    3300036: Sky
+    3300038: WallFront
+    3300040: WallSide
+    3300042: Window
+    4300000: Plane001
+    4300002: Lake
+    4300004: Grass
+    4300006: Mountains
+    4300008: Sky
+    4300010: Cloud
+    4300012: Cloud
+    4300014: DoorLeft
+    4300016: DoorRight
+    4300018: RoofFront
+    4300020: RoofSide
+    4300022: WallSide
+    4300024: WallFront
+    4300026: LittleHouseWallFront
+    4300028: LittleHouseWallSide
+    4300030: LittleHouseRoof
+    4300032: LittleHouseWindow
+    4300034: Window
+    4300036: FrameDoor
+    4300038: Inside
+    4300040: Cloud001
+    4300042: Cloud002
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
