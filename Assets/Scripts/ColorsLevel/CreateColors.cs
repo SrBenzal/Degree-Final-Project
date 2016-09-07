@@ -24,8 +24,4 @@ public class CreateColors : MonoBehaviour {
 			transform.GetChild (i).gameObject.GetComponent<Renderer> ().material.color = colors [i];
 		}
 	}
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

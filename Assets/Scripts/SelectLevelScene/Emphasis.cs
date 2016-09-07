@@ -12,11 +12,7 @@ public class Emphasis : MonoBehaviour {
 			panels [i] = transform.GetChild (i).gameObject;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 	public void makeImageBrighter(int i){
 		panels [i].GetComponent<Image> ().color = Color.white;
 	}

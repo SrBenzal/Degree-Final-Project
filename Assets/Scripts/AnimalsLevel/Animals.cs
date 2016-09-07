@@ -14,13 +14,8 @@ public class Animals : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Manager.animalSelected = (GetComponentInChildren<TextMesh>().text);
+			Manager.animalSelected = this.name;//(GetComponentInChildren<TextMesh>().text);
             Manager.checkSelected();
         }
     }
-
-    // Update is called once per frame
-    void Update () {
-	
-	}
 }

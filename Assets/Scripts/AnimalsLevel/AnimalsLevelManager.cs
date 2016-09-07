@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AnimalsLevelManager : MonoBehaviour
 {
-    string[] animals = {"Dog", "Cat","Cow", "Sheep", "Pig", "Rooster", "Duck", "Elephant" };
+	const int MaxRightNumbers = 5;
+	int Rights;
+	string[] animals = {"Dog", "Cat","Cow", "Sheep", "Pig", "Rooster", "Duck", "Elephant" };
 
     public Text RightAnimalText;
     string RightAnimal = "";
@@ -22,6 +25,7 @@ public class AnimalsLevelManager : MonoBehaviour
         if (animalSelected == RightAnimal)
         {
             Debug.Log("Bien");
+			CheckFinishLevel ();
             setRightAnimal();
         }
         else
@@ -29,6 +33,14 @@ public class AnimalsLevelManager : MonoBehaviour
             Debug.Log("Mal");
         }
     }
+
+	void CheckFinishLevel(){
+		Rights++;
+		if (Rights==MaxRightNumbers) {
+			Debug.Log ("Level Complete");
+			SceneManager.LoadScene ("SelectionLevel");
+		}
+	}
 
 
     public void setRightAnimal()
@@ -51,11 +63,5 @@ public class AnimalsLevelManager : MonoBehaviour
             RightAnimal = animals[Random.Range(0, animals.Length)];
         }
         RightAnimalText.text = RightAnimal;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

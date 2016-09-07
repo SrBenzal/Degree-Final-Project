@@ -8,11 +8,7 @@ public class LoadScene : MonoBehaviour {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 
 	public void loadColorLevel(){
 		SceneManager.LoadScene ("ColorsLevel");

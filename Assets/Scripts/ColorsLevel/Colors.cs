@@ -14,9 +14,4 @@ public class Colors : MonoBehaviour {
 		Manager.selectedColor = GetComponent<Renderer> ().material.color;
 		Debug.Log (Manager.selectedColor);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
