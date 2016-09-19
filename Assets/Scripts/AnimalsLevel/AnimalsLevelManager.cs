@@ -13,8 +13,6 @@ public class AnimalsLevelManager : MonoBehaviour
     string RightAnimal = "";
     public string animalSelected;
 
-
-    // Use this for initialization
     void Start()
     {
         setRightAnimal();
@@ -29,9 +27,7 @@ public class AnimalsLevelManager : MonoBehaviour
             setRightAnimal();
         }
         else
-        {
             Debug.Log("Mal");
-        }
     }
 
 	void CheckFinishLevel(){
@@ -41,7 +37,6 @@ public class AnimalsLevelManager : MonoBehaviour
 			SceneManager.LoadScene ("SelectionLevel");
 		}
 	}
-
 
     public void setRightAnimal()
     {

@@ -22,9 +22,8 @@ public class NumbersLevelManager : MonoBehaviour {
             vector[n] = value;
         }
     }
-
-    // Use this for initialization
-    void Start () {
+		
+	void Start () {
         string s = "";
         for (int i = 0; i < numbers.Length; i++)
         {
@@ -52,16 +51,12 @@ public class NumbersLevelManager : MonoBehaviour {
             setRightNumber();
         }
         else
-        {
             Debug.Log("Mal");
-        }
     }
 
     void ReWritePanels() {
         for (int i = 0; i < numbers.Length; i++)
-        {
             numbersPanels[i].GetComponentInChildren<TextMesh>().text = numbers[i].ToString();
-        }
     }
 
     public void setRightNumber() {
@@ -79,14 +74,7 @@ public class NumbersLevelManager : MonoBehaviour {
             }
         }
         else
-        {
             RightNumber = Random.Range(0, numbers.Length);
-        }
         RightNumberText.text = RightNumber.ToString();
     }
-
-    // Update is called once per frame
-    void Update () {
-	
-	}
 }

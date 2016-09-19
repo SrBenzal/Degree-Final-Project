@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Emphasis : MonoBehaviour {
 
 	GameObject[] panels;
-	// Use this for initialization
+
 	void Start () {
 		panels = new GameObject[transform.childCount];
 		for (int i = 0; i < transform.childCount; i++) {
@@ -18,7 +18,6 @@ public class Emphasis : MonoBehaviour {
 	}
 
 	public void makeImageDarker(int i){
-		//panels [i].GetComponent<Image> ().color = Color.gray;
 		panels [i].GetComponent<Image> ().color = new Color(0.75f,0.75f,0.75f,1);
 	}
 }

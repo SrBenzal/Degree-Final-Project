@@ -11,14 +11,11 @@ public class Drag : MonoBehaviour
     float speed = 1.5f;
     bool selected=false, arrastrando=false, inPosition=false;
     Vector3 MarginVector = new Vector3(0.5f,0f,0.5f);
-    // Use this for initialization
-    void Start()
+
+	void Start()
     {
         Manager = FindObjectOfType<ShapesLevelManager>();
         Player = FindObjectOfType<Player>();
-    }
-
-    void IsInPosition() {
     }
 
     void OnTriggerEnter(Collider other)
@@ -48,9 +45,7 @@ public class Drag : MonoBehaviour
         else
         {
             if (!Manager.oneSelected)
-            {
                 selected = true;
-            }
         }
 
     }
@@ -58,14 +53,11 @@ public class Drag : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         if (!arrastrando)
-        {
             selected = false;
-        }
     }
 
     void drag()
     {
-
         Vector3 finalPosition = Player.transform.position - MarginVector;
         transform.position = Vector3.Lerp(transform.position, finalPosition, Time.deltaTime * 3 * speed);
     }
@@ -82,22 +74,15 @@ public class Drag : MonoBehaviour
             else
             {
                 if (selected)
-                {
                     arrastrando = true;
-                }
             }
         }
     }
-
-
-    // Update is called once per frame
+		
     void Update()
     {
         getArrastrando();
-        //Debug.Log("Object: " + this.name + " selected: " + selected);
         if (selected && arrastrando && !inPosition)
-        {
             drag();
-        }
     }
 }

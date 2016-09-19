@@ -4,11 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-
 
 	public void loadColorLevel(){
 		SceneManager.LoadScene ("ColorsLevel");

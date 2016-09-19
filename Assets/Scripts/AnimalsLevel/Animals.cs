@@ -5,7 +5,6 @@ public class Animals : MonoBehaviour {
 
     AnimalsLevelManager Manager;
 
-    // Use this for initialization
     void Start () {
         Manager = FindObjectOfType<AnimalsLevelManager>();
     }
@@ -14,7 +13,7 @@ public class Animals : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-			Manager.animalSelected = this.name;//(GetComponentInChildren<TextMesh>().text);
+			Manager.animalSelected = this.name;
             Manager.checkSelected();
         }
     }

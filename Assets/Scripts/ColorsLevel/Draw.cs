@@ -5,7 +5,9 @@ public class Draw : MonoBehaviour {
 
 	ColorsLevelManager Manager;
 	bool selected;
-	// Use this for initialization
+	bool locked =false;
+	public int ID;
+
 	void Start () {
 		Manager = FindObjectOfType<ColorsLevelManager> ();
 	}
@@ -19,13 +21,17 @@ public class Draw : MonoBehaviour {
 	}
 
 	void paint(){
-		GetComponent<Renderer> ().material.color = Manager.selectedColor;
+		GetComponent<Renderer> ().material.color = Manager.selectedColor.color;
 	}
 
-	// Update is called once per frame
 	void Update () {
-		if (selected && Input.GetKeyDown (KeyCode.Space)) {
+		if (selected && Input.GetKeyDown (KeyCode.Space) && !locked) {
+			if (Manager.selectedColor.ID == this.ID) {
+				locked = true;
+				Manager.rightColors++;
+			}			
 			paint ();
+			Manager.checkFinishLevel ();
 		}
 	}
 }

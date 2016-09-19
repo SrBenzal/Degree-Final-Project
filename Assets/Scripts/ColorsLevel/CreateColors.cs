@@ -3,8 +3,6 @@ using System.Collections;
 
 public class CreateColors : MonoBehaviour {
 
-	// Use this for initialization
-
 	Color[] colors;
 	void Start () {
 		colors = new Color[transform.childCount];
