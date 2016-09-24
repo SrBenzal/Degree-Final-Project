@@ -22,6 +22,7 @@ public class Animals : MonoBehaviour {
             Manager.checkSelected();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (Input.GetKeyDown(KeyCode.H)) {
 			GetComponent<AudioSource> ().Play ();
 		}
@@ -31,5 +32,7 @@ public class Animals : MonoBehaviour {
             GetComponent<AudioSource>().Play();
         }
 >>>>>>> origin/master
+=======
+>>>>>>> parent of d48ea63... add buton exit and placeholders sounds. Code improved to use the sounds
     }
 }

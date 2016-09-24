@@ -62,11 +62,6 @@ public class Drag : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, finalPosition, Time.deltaTime * 3 * speed);
     }
 
-	void OnTriggerStay(Collider other){
-		if (Input.GetKeyDown(KeyCode.B))
-			GetComponent<AudioSource> ().Play ();
-	}
-
     void getArrastrando() {
         if (Input.GetKeyDown(KeyCode.Space))
         {

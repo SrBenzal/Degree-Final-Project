@@ -8,7 +8,7 @@ public class AnimalsLevelManager : MonoBehaviour
 	const int MaxRightNumbers = 5;
 <<<<<<< HEAD
 	int Rights;
-	string[] animals = {"Cat","Cow", "Dog", "Duck", "Elephant", "Pig", "Rooster", "Sheep"};
+	string[] animals = {"Dog", "Cat","Cow", "Sheep", "Pig", "Rooster", "Duck", "Elephant" };
 
 =======
 	int Rights=0;
@@ -21,12 +21,15 @@ public class AnimalsLevelManager : MonoBehaviour
     int index = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public GameObject animalsParent;
 
 =======
     public Animator anim;
     // Use this for initialization
 >>>>>>> origin/master
+=======
+>>>>>>> parent of d48ea63... add buton exit and placeholders sounds. Code improved to use the sounds
     void Start()
     {
         Shuffle(animals);
@@ -40,6 +43,7 @@ public class AnimalsLevelManager : MonoBehaviour
             Debug.Log("Bien");
 <<<<<<< HEAD
 			CheckFinishLevel ();
+<<<<<<< HEAD
 =======
             index++;
             CheckFinishLevel();
@@ -48,6 +52,9 @@ public class AnimalsLevelManager : MonoBehaviour
                 setRightAnimal(index);
             }
 >>>>>>> origin/master
+=======
+            setRightAnimal();
+>>>>>>> parent of d48ea63... add buton exit and placeholders sounds. Code improved to use the sounds
         }
         else
             Debug.Log("Mal");
@@ -59,14 +66,11 @@ public class AnimalsLevelManager : MonoBehaviour
 			Debug.Log ("Level Complete");
 <<<<<<< HEAD
 			SceneManager.LoadScene ("SelectionLevel");
-		} else {
-			setRightAnimal();
 		}
 	}
 
     public void setRightAnimal()
     {
-		int rndIndex = Random.Range (0, animals.Length);;
         if (RightAnimal != "")
 =======
             anim.enabled = true;
@@ -98,8 +102,7 @@ public class AnimalsLevelManager : MonoBehaviour
             bool diferente = false;
             while (!diferente)
             {
-				rndIndex = Random.Range (0, animals.Length);
-                string newAnimal = animals[rndIndex];
+                string newAnimal = animals[Random.Range(0, animals.Length)];
                 if (newAnimal != RightAnimal)
                 {
                     RightAnimal = newAnimal;
@@ -108,6 +111,7 @@ public class AnimalsLevelManager : MonoBehaviour
             }
         }
         else
+<<<<<<< HEAD
 <<<<<<< HEAD
 			RightAnimal = animals[rndIndex];
 		animalsParent.transform.GetChild (rndIndex).GetComponent<AudioSource> ().Play ();
@@ -121,6 +125,11 @@ public class AnimalsLevelManager : MonoBehaviour
         StopAnimalSound();
         SelectAnimalSound(animals[i]);
 >>>>>>> origin/master
+=======
+        {
+            RightAnimal = animals[Random.Range(0, animals.Length)];
+        }
+>>>>>>> parent of d48ea63... add buton exit and placeholders sounds. Code improved to use the sounds
         RightAnimalText.text = RightAnimal;
     }
 
