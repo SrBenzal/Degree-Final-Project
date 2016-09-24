@@ -4,7 +4,12 @@ using System.Collections;
 public class Animals : MonoBehaviour {
 
     AnimalsLevelManager Manager;
+<<<<<<< HEAD
 
+=======
+    public int ID;
+    // Use this for initialization
+>>>>>>> origin/master
     void Start () {
         Manager = FindObjectOfType<AnimalsLevelManager>();
     }
@@ -16,8 +21,15 @@ public class Animals : MonoBehaviour {
 			Manager.animalSelected = this.name;
             Manager.checkSelected();
         }
+<<<<<<< HEAD
 		if (Input.GetKeyDown(KeyCode.H)) {
 			GetComponent<AudioSource> ().Play ();
 		}
+=======
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            GetComponent<AudioSource>().Play();
+        }
+>>>>>>> origin/master
     }
 }

@@ -27,17 +27,17 @@ public class Drag : MonoBehaviour
             {
                 default:
                     break;
-                case "ball":
-                    Manager.BallsLeft--;
+                case "circle":
+                    Manager.CirclesLeft--;
                     break;
-                case "cube":
-                    Manager.CubesLeft--;
+                case "heart":
+                    Manager.HeartsLeft--;
                     break;
                 case "star":
                     Manager.StarsLeft--;
                     break;
-                case "rombo":
-                    Manager.RombosLeft--;
+                case "triangle":
+                    Manager.TrianglesLeft--;
                     break; 
             }
             Manager.updateText();
