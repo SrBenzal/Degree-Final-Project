@@ -10,6 +10,9 @@ public class NumbersLevelManager : MonoBehaviour {
     int RightNumber=-1;
     public int numberSelected;
 
+	public GameObject numbersParent;
+
+
     public static void Shuffle(int[] vector) //shuffle int vector randomly 
     {
         int n = vector.Length;
@@ -60,21 +63,21 @@ public class NumbersLevelManager : MonoBehaviour {
     }
 
     public void setRightNumber() {
-        if (RightNumber!=-1)
-        {
-            bool diferente = false;
-            while (!diferente)
-            {
-                int newNumber = Random.Range(0, 10);
-                if (newNumber!=RightNumber)
-                {
-                    RightNumber = newNumber;
-                    diferente = true;
-                }
-            }
-        }
-        else
-            RightNumber = Random.Range(0, numbers.Length);
+		int rndIndex = Random.Range (0, numbers.Length);
+		if (RightNumber != -1) {
+			bool diferente = false;
+			while (!diferente) {
+				rndIndex = Random.Range (0, numbers.Length);
+				if (rndIndex != RightNumber) {
+					RightNumber = rndIndex;
+					diferente = true;
+				}
+			}
+		} else
+			RightNumber = rndIndex;
+		numbersPanels [rndIndex].GetComponent<AudioSource> ().Play ();
+		Debug.Log (rndIndex);
+		Debug.Log (numbersPanels [rndIndex]);
         RightNumberText.text = RightNumber.ToString();
     }
 }

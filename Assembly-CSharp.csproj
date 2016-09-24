@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\ColorsLevel\LevelManager.cs" />
      <Compile Include="Assets\Scripts\NumbersLevel\Number.cs" />
      <Compile Include="Assets\Scripts\NumbersLevel\NumbersLevelManager.cs" />
+     <Compile Include="Assets\Scripts\Player\GoToSelectLevel.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShapes.cs" />
      <Compile Include="Assets\Scripts\SelectLevelScene\Emphasis.cs" />

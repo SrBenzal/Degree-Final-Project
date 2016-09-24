@@ -7,11 +7,13 @@ public class AnimalsLevelManager : MonoBehaviour
 {
 	const int MaxRightNumbers = 5;
 	int Rights;
-	string[] animals = {"Dog", "Cat","Cow", "Sheep", "Pig", "Rooster", "Duck", "Elephant" };
+	string[] animals = {"Cat","Cow", "Dog", "Duck", "Elephant", "Pig", "Rooster", "Sheep"};
 
     public Text RightAnimalText;
     string RightAnimal = "";
     public string animalSelected;
+
+	public GameObject animalsParent;
 
     void Start()
     {
@@ -24,7 +26,6 @@ public class AnimalsLevelManager : MonoBehaviour
         {
             Debug.Log("Bien");
 			CheckFinishLevel ();
-            setRightAnimal();
         }
         else
             Debug.Log("Mal");
@@ -35,17 +36,21 @@ public class AnimalsLevelManager : MonoBehaviour
 		if (Rights==MaxRightNumbers) {
 			Debug.Log ("Level Complete");
 			SceneManager.LoadScene ("SelectionLevel");
+		} else {
+			setRightAnimal();
 		}
 	}
 
     public void setRightAnimal()
     {
+		int rndIndex = Random.Range (0, animals.Length);;
         if (RightAnimal != "")
         {
             bool diferente = false;
             while (!diferente)
             {
-                string newAnimal = animals[Random.Range(0, animals.Length)];
+				rndIndex = Random.Range (0, animals.Length);
+                string newAnimal = animals[rndIndex];
                 if (newAnimal != RightAnimal)
                 {
                     RightAnimal = newAnimal;
@@ -54,9 +59,8 @@ public class AnimalsLevelManager : MonoBehaviour
             }
         }
         else
-        {
-            RightAnimal = animals[Random.Range(0, animals.Length)];
-        }
+			RightAnimal = animals[rndIndex];
+		animalsParent.transform.GetChild (rndIndex).GetComponent<AudioSource> ().Play ();
         RightAnimalText.text = RightAnimal;
     }
 }

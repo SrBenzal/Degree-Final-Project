@@ -16,5 +16,8 @@ public class Animals : MonoBehaviour {
 			Manager.animalSelected = this.name;
             Manager.checkSelected();
         }
+		if (Input.GetKeyDown(KeyCode.H)) {
+			GetComponent<AudioSource> ().Play ();
+		}
     }
 }

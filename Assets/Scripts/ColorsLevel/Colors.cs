@@ -11,9 +11,15 @@ public class Colors : MonoBehaviour {
 		Manager = FindObjectOfType<ColorsLevelManager> ();
 	}
 
-	void OnTriggerEnter(Collider other) {
-		color = GetComponent<Renderer> ().material.color;
-		Manager.selectedColor = this;
-		Debug.Log (Manager.selectedColor);
+	void OnTriggerStay(Collider other) {
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			color = GetComponent<Renderer> ().material.color;
+			Manager.selectedColor = this;
+			Debug.Log (Manager.selectedColor);
+		}
+		if (Input.GetKeyDown(KeyCode.H)) {
+			GetComponent<AudioSource> ().Play ();
+		}
 	}
 }
