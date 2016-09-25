@@ -63,6 +63,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Degree-Final-Project.CSharp.Plugins.csproj">
+      <Project>{81D22B49-6A5F-D492-1947-AE11B8F2B8F7}</Project>
+      <Name>Degree-Final-Project.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\KinectView\Scripts\BodySourceManager.cs" />
+    <Compile Include="Assets\KinectView\Scripts\BodySourceView.cs" />
+    <Compile Include="Assets\KinectView\Scripts\ColorSourceManager.cs" />
+    <Compile Include="Assets\KinectView\Scripts\ColorSourceView.cs" />
+    <Compile Include="Assets\KinectView\Scripts\DepthSourceManager.cs" />
+    <Compile Include="Assets\KinectView\Scripts\DepthSourceView.cs" />
+    <Compile Include="Assets\KinectView\Scripts\DisableOnStart.cs" />
+    <Compile Include="Assets\KinectView\Scripts\InfraredSourceManager.cs" />
+    <Compile Include="Assets\KinectView\Scripts\InfraredSourceView.cs" />
+    <Compile Include="Assets\KinectView\Scripts\MultiSourceManager.cs" />
     <Compile Include="Assets\Scripts\AnimalsLevel\Animals.cs" />
     <Compile Include="Assets\Scripts\AnimalsLevel\AnimalsLevelManager.cs" />
     <Compile Include="Assets\Scripts\ColorsLevel\Colors.cs" />

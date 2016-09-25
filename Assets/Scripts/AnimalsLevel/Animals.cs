@@ -4,35 +4,48 @@ using System.Collections;
 public class Animals : MonoBehaviour {
 
     AnimalsLevelManager Manager;
-<<<<<<< HEAD
-
-=======
     public int ID;
+    bool music = false, bend=false;
+
     // Use this for initialization
->>>>>>> origin/master
     void Start () {
         Manager = FindObjectOfType<AnimalsLevelManager>();
+        
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        Debug.Log(music);
+        if (!music)
         {
-			Manager.animalSelected = this.name;
-            Manager.checkSelected();
+            if (Manager.player.RightHandUp())
+            {
+                GetComponent<AudioSource>().Play();
+                music = true;
+            }
+
+            if (Manager.player.Bend())
+            {
+                Manager.animalSelected = this.name;
+                Manager.checkSelected();
+            }
+
+            /*if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Manager.animalSelected = this.name;
+                Manager.checkSelected();
+            }
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                GetComponent<AudioSource>().Play();
+            }*/
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-		if (Input.GetKeyDown(KeyCode.H)) {
-			GetComponent<AudioSource> ().Play ();
-		}
-=======
-        if (Input.GetKeyDown(KeyCode.A))
+        else
         {
-            GetComponent<AudioSource>().Play();
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                music = false;
+            }
         }
->>>>>>> origin/master
-=======
->>>>>>> parent of d48ea63... add buton exit and placeholders sounds. Code improved to use the sounds
     }
 }

@@ -3,17 +3,6 @@ using System.Collections;
 
 public class Draw : MonoBehaviour
 {
-
-<<<<<<< HEAD
-	ColorsLevelManager Manager;
-	bool selected;
-	bool locked =false;
-	public int ID;
-
-	void Start () {
-		Manager = FindObjectOfType<ColorsLevelManager> ();
-	}
-=======
     ColorsLevelManager Manager;
     bool selected;
     bool locked = false;
@@ -23,7 +12,6 @@ public class Draw : MonoBehaviour
     {
         Manager = FindObjectOfType<ColorsLevelManager>();
     }
->>>>>>> origin/master
 
     void OnTriggerEnter(Collider other)
     {
@@ -35,7 +23,6 @@ public class Draw : MonoBehaviour
         selected = false;
     }
 
-<<<<<<< HEAD
 	void paint(){
 		GetComponent<Renderer> ().material.color = Manager.selectedColor.color;
 	}
@@ -51,25 +38,3 @@ public class Draw : MonoBehaviour
 		}
 	}
 }
-=======
-    void paint()
-    {
-        GetComponent<Renderer>().material.color = Manager.selectedColor.color;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (selected && Input.GetKeyDown(KeyCode.Space) && !locked)
-        {
-            if (Manager.selectedColor.ID == this.ID)
-            {
-                locked = true;
-                Manager.rightColors++;
-            }
-            paint();
-            Manager.checkFinishLevel();
-        }
-    }
-}
->>>>>>> origin/master
