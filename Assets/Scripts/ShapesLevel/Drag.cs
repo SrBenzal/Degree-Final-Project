@@ -71,7 +71,7 @@ public class Drag : MonoBehaviour
                 music = true;
             }
 
-            if (Manager.player.LeftHandUp())
+            if (Manager.player.ClapHands())
             {
                 /*if (arrastrando)
                 {
@@ -120,7 +120,7 @@ public class Drag : MonoBehaviour
                 music = true;
             }
 
-            if (Manager.player.LeftHandUp())
+            if (Manager.player.ClapHands())
             {
                 if (arrastrando)
                 {

@@ -25,9 +25,10 @@ public class Colors : MonoBehaviour
                 music = true;
             }
 
-            if (Manager.player.LeftHandUp())
+            if (Manager.player.ClapHands())
             {
                 color = GetComponent<Renderer>().material.color;
+                Manager.player.gameObject.GetComponent<Renderer>().material.color = color;
                 Manager.selectedColor = this;
                 Debug.Log(Manager.selectedColor);
 

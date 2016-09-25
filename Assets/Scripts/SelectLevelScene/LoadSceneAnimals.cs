@@ -13,11 +13,11 @@ public class LoadSceneAnimals : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        this.GetComponent<Renderer>().material.color = new Color(0.75f, 0.75f, 0.75f, 1);
+        this.GetComponent<Renderer>().material.color = new Color(0.5f, 0.5f, 0.5f, 1);
     }
     void OnTriggerStay(Collider other)
     {
-        if (player.RightHandUp())
+        if (player.ClapHands())
         {
             loadShapesLevel();
         }

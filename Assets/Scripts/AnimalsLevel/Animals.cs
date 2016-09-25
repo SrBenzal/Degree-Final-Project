@@ -23,7 +23,7 @@ public class Animals : MonoBehaviour {
                 music = true;
             }
 
-            if (Manager.player.LeftHandUp())
+            if (Manager.player.ClapHands())
             {
                 Manager.animalSelected = this.name;
                 Manager.checkSelected();

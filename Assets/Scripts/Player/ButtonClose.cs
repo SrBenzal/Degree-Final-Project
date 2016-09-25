@@ -8,7 +8,7 @@ public class ButtonClose: MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (player.LeftHandUp())
+        if (player.ClapHands())
         {
             SceneManager.LoadScene("SelectionLevel");
         }
