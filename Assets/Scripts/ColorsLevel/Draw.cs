@@ -36,5 +36,16 @@ public class Draw : MonoBehaviour
 			paint ();
 			Manager.checkFinishLevel ();
 		}
-	}
+
+        if (selected && Manager.player.LeftHandUp() && !locked)
+        {
+            if (Manager.selectedColor.ID == this.ID)
+            {
+                locked = true;
+                Manager.rightColors++;
+            }
+            paint();
+            Manager.checkFinishLevel();
+        }
+    }
 }

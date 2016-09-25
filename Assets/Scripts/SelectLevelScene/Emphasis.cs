@@ -18,6 +18,6 @@ public class Emphasis : MonoBehaviour {
 	}
 
 	public void makeImageDarker(int i){
-		panels [i].GetComponent<Image> ().color = new Color(0.75f,0.75f,0.75f,1);
+		panels [i].GetComponent<Image> ().color = new Color(0.5f,0.5f,0.5f,1);
 	}
 }

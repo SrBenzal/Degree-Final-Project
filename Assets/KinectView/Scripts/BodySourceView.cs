@@ -129,6 +129,23 @@ public class BodySourceView : MonoBehaviour
         return false;
     }
 
+    public bool ClapHands()
+    {
+        Kinect.JointType jtlefthand = Kinect.JointType.HandLeft;
+        Kinect.JointType jtrighthand = Kinect.JointType.HandRight;
+
+        GameObject Body = GameObject.FindGameObjectWithTag("Player");
+        if (Body != null)
+        {
+            Transform jointObjHandL = Body.transform.FindChild(jtlefthand.ToString());
+
+            Transform jointObjHandR = Body.transform.FindChild(jtrighthand.ToString());
+            if (Vector3.Distance(jointObjHandL.position, jointObjHandR.position) <= 1f)
+                return true;
+        }
+        return false;
+    }
+
     public bool Bend()
     {
         Kinect.JointType jthand = Kinect.JointType.HandRight;
@@ -147,6 +164,23 @@ public class BodySourceView : MonoBehaviour
         return false;
     }
 
+    public bool LeftHandUp() {
+        Kinect.JointType jthand = Kinect.JointType.HandLeft;
+        Kinect.JointType jtneck = Kinect.JointType.Neck;
+
+        GameObject Body = GameObject.FindGameObjectWithTag("Player");
+        if (Body != null)
+        {
+            Transform jointObjHand = Body.transform.FindChild(jthand.ToString());
+
+            Transform jointObjNeck = Body.transform.FindChild(jtneck.ToString());
+
+            if (jointObjHand.position.y >= jointObjNeck.position.y)
+                return true;
+        }
+        return false;
+    }
+
     private void MoveCube()
     {
         Kinect.JointType jtSpineBase = Kinect.JointType.SpineBase;
@@ -154,7 +188,7 @@ public class BodySourceView : MonoBehaviour
         if (Body!=null)
         {
             Transform jointObj = Body.transform.FindChild(jtSpineBase.ToString());
-            Cube.transform.Translate((jointObj.position.x - Cube.transform.position.x) + 0f, 0, (-jointObj.position.z - Cube.transform.position.z * 1.5f) + 20f);
+            Cube.transform.Translate((jointObj.position.x - Cube.transform.position.x) + 0f, 0, (-jointObj.position.z - Cube.transform.position.z * 1.5f) + 25f);
 
         }
 

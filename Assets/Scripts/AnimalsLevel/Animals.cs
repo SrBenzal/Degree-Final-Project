@@ -15,7 +15,6 @@ public class Animals : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        Debug.Log(music);
         if (!music)
         {
             if (Manager.player.RightHandUp())
@@ -24,7 +23,7 @@ public class Animals : MonoBehaviour {
                 music = true;
             }
 
-            if (Manager.player.Bend())
+            if (Manager.player.LeftHandUp())
             {
                 Manager.animalSelected = this.name;
                 Manager.checkSelected();

@@ -2,13 +2,18 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class NumbersLevelManager : MonoBehaviour {
+public class NumbersLevelManager : MonoBehaviour
+{
 
     int[] numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     public GameObject[] numbersPanels;
     public Text RightNumberText;
-    int RightNumber=-1;
+    int RightNumber = -1;
     public int numberSelected;
+
+    public GameObject numbersParent;
+
+    public BodySourceView player;
 
     public static void Shuffle(int[] vector) //shuffle int vector randomly 
     {
@@ -22,8 +27,9 @@ public class NumbersLevelManager : MonoBehaviour {
             vector[n] = value;
         }
     }
-		
-	void Start () {
+
+    void Start()
+    {
         string s = "";
         for (int i = 0; i < numbers.Length; i++)
         {
@@ -33,7 +39,7 @@ public class NumbersLevelManager : MonoBehaviour {
         Debug.Log(s);
 
         Shuffle(numbers);
-        s="";
+        s = "";
         for (int i = 0; i < numbers.Length; i++)
         {
             s += numbers[i].ToString();
@@ -44,8 +50,9 @@ public class NumbersLevelManager : MonoBehaviour {
         setRightNumber();
     }
 
-    public void checkSelected() {
-        if (numberSelected==RightNumber)
+    public void checkSelected()
+    {
+        if (numberSelected == RightNumber)
         {
             Debug.Log("Bien");
             setRightNumber();
@@ -54,27 +61,33 @@ public class NumbersLevelManager : MonoBehaviour {
             Debug.Log("Mal");
     }
 
-    void ReWritePanels() {
+    void ReWritePanels()
+    {
         for (int i = 0; i < numbers.Length; i++)
             numbersPanels[i].GetComponentInChildren<TextMesh>().text = numbers[i].ToString();
     }
 
-    public void setRightNumber() {
-        if (RightNumber!=-1)
+    public void setRightNumber()
+    {
+        int rndIndex = Random.Range(0, numbers.Length);
+        if (RightNumber != -1)
         {
             bool diferente = false;
             while (!diferente)
             {
-                int newNumber = Random.Range(0, 10);
-                if (newNumber!=RightNumber)
+                rndIndex = Random.Range(0, numbers.Length);
+                if (rndIndex != RightNumber)
                 {
-                    RightNumber = newNumber;
+                    RightNumber = rndIndex;
                     diferente = true;
                 }
             }
         }
         else
-            RightNumber = Random.Range(0, numbers.Length);
+            RightNumber = rndIndex;
+        numbersPanels[rndIndex].GetComponent<AudioSource>().Play();
+        Debug.Log(rndIndex);
+        Debug.Log(numbersPanels[rndIndex]);
         RightNumberText.text = RightNumber.ToString();
     }
 }

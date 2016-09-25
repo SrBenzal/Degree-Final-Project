@@ -9,7 +9,7 @@ public class Drag : MonoBehaviour
     ShapesLevelManager Manager;
     Player Player;
     float speed = 1.5f;
-    bool selected=false, arrastrando=false, inPosition=false;
+    bool selected = false, arrastrando = false, inPosition = false, music = false;
     Vector3 MarginVector = new Vector3(0.5f,0f,0.5f);
 
 	void Start()
@@ -62,8 +62,43 @@ public class Drag : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, finalPosition, Time.deltaTime * 3 * speed);
     }
 
+    void OnTriggerStay(Collider other) {
+        if (!music)
+        {
+            if (Manager.player.RightHandUp())
+            {
+                GetComponent<AudioSource>().Play();
+                music = true;
+            }
+
+            if (Manager.player.LeftHandUp())
+            {
+                /*if (arrastrando)
+                {
+                    arrastrando = false;
+                    selected = false;
+                    Manager.oneSelected = false;
+                }
+                else
+                {
+                    if (selected)
+                        arrastrando = true;
+                }*/
+                selected = true;
+                arrastrando = true;
+            }
+        }
+        else
+        {
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                music = false;
+            }
+        }
+    }
+
     void getArrastrando() {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             if (arrastrando)
             {
@@ -76,12 +111,42 @@ public class Drag : MonoBehaviour
                 if (selected)
                     arrastrando = true;
             }
+        }*/
+        if (!music)
+        {
+            if (Manager.player.RightHandUp())
+            {
+                GetComponent<AudioSource>().Play();
+                music = true;
+            }
+
+            if (Manager.player.LeftHandUp())
+            {
+                if (arrastrando)
+                {
+                    arrastrando = false;
+                    selected = false;
+                    Manager.oneSelected = false;
+                }
+                else
+                {
+                    if (selected)
+                        arrastrando = true;
+                }
+            }
+        }
+        else
+        {
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                music = false;
+            }
         }
     }
 		
     void Update()
     {
-        getArrastrando();
+        //getArrastrando();
         if (selected && arrastrando && !inPosition)
             drag();
     }

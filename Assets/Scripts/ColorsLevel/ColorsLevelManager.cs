@@ -8,6 +8,9 @@ public class ColorsLevelManager : MonoBehaviour
     public Colors selectedColor;
     public GameObject[] drawParts;
 
+    public BodySourceView player;
+
+
     public int rightColors = 0;
 
 

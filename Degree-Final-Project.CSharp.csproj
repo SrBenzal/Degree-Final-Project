@@ -92,7 +92,11 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShapes.cs" />
     <Compile Include="Assets\Scripts\SelectLevelScene\Emphasis.cs" />
-    <Compile Include="Assets\Scripts\SelectLevelScene\LoadScene.cs" />
+    <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneAnimals.cs" />
+    <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneColors.cs" />
+    <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneNumbers.cs" />
+    <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneShapes.cs" />
+    <Compile Include="Assets\Scripts\SelectLevelScene\SelectLevel.cs" />
     <Compile Include="Assets\Scripts\ShapesLevel\DiferentColorMaterial.cs" />
     <Compile Include="Assets\Scripts\ShapesLevel\Drag.cs" />
     <Compile Include="Assets\Scripts\ShapesLevel\Shapes.cs" />

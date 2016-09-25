@@ -10,10 +10,12 @@ public class ShapesLevelManager : MonoBehaviour
     public TextMesh BallsLeftText, CubesLeftText, StarsLeftText, RombosLeftText;
     public int CirclesLeft = 5, HeartsLeft = 5, StarsLeft = 5, TrianglesLeft = 5;
 
+    public BodySourceView player;
+
     public void updateText()
     {
-        BallsLeftText.text = CirclesLeft.ToString();
-        CubesLeftText.text = HeartsLeft.ToString();
+        BallsLeftText.text = HeartsLeft.ToString();
+        CubesLeftText.text = CirclesLeft.ToString();
         StarsLeftText.text = StarsLeft.ToString();
         RombosLeftText.text = TrianglesLeft.ToString();
         CheckEndLevel();

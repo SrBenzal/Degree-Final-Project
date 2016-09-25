@@ -2,29 +2,17 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class ButtonClose : MonoBehaviour {
+public class ButtonClose: MonoBehaviour
+{
+    public BodySourceView player;
 
-    bool selected;
-
-    // Use this for initialization
-    void Start () {
-	
-	}
-
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        selected = true;
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        selected = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (selected && Input.GetKeyDown(KeyCode.Space))
+        if (player.LeftHandUp())
+        {
+            SceneManager.LoadScene("SelectionLevel");
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene("SelectionLevel");
         }
