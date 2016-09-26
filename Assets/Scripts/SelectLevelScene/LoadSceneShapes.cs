@@ -19,10 +19,14 @@ public class LoadSceneShapes : MonoBehaviour {
     {
         if (player.ClapHands())
         {
-            loadShapesLevel();
+			loadLevel();
         }
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			loadLevel ();
+		}
     }
-    public void loadShapesLevel()
+	public void loadLevel()
     {
         SceneManager.LoadScene("ShapesLevel");
     }
