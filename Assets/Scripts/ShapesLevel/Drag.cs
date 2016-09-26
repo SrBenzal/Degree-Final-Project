@@ -73,20 +73,20 @@ public class Drag : MonoBehaviour
 
             if (Manager.player.ClapHands())
             {
-                /*if (arrastrando)
-                {
-                    arrastrando = false;
-                    selected = false;
-                    Manager.oneSelected = false;
-                }
-                else
-                {
-                    if (selected)
-                        arrastrando = true;
-                }*/
                 selected = true;
                 arrastrando = true;
             }
+
+			if (Input.GetKeyDown(KeyCode.Space))
+        	{
+                selected = true;
+                arrastrando = true;
+        	}
+			if (Input.GetKeyDown(KeyCode.H))
+			{
+				GetComponent<AudioSource>().Play();
+				music = true;
+			}
         }
         else
         {

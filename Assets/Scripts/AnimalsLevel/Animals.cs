@@ -29,7 +29,7 @@ public class Animals : MonoBehaviour {
                 Manager.checkSelected();
             }
 
-            /*if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Manager.animalSelected = this.name;
                 Manager.checkSelected();
@@ -37,7 +37,8 @@ public class Animals : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.H))
             {
                 GetComponent<AudioSource>().Play();
-            }*/
+				music = true;
+            }
         }
         else
         {

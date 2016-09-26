@@ -29,12 +29,14 @@ public class Draw : MonoBehaviour
 
 	void Update () {
 		if (selected && Input.GetKeyDown (KeyCode.Space) && !locked) {
-			if (Manager.selectedColor.ID == this.ID) {
-				locked = true;
-				Manager.rightColors++;
-			}			
-			paint ();
-			Manager.checkFinishLevel ();
+			if (Manager.selectedColor != null) {
+				if (Manager.selectedColor.ID == this.ID) {
+					locked = true;
+					Manager.rightColors++;
+				}
+				paint ();
+				Manager.checkFinishLevel ();
+			}
 		}
 
         if (selected && Manager.player.ClapHands() && !locked)

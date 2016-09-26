@@ -34,15 +34,18 @@ public class Colors : MonoBehaviour
 
             }
 
-            /*if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Manager.animalSelected = this.name;
-                Manager.checkSelected();
-            }
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                GetComponent<AudioSource>().Play();
-            }*/
+			if (Input.GetKeyDown(KeyCode.Space))
+	        {
+				color = GetComponent<Renderer>().material.color;
+				Manager.player.gameObject.GetComponent<Renderer>().material.color = color;
+				Manager.selectedColor = this;
+				Debug.Log(Manager.selectedColor);
+	        }
+	        if (Input.GetKeyDown(KeyCode.H))
+	        {
+				GetComponent<AudioSource>().Play();
+				music = true;
+	        }
         }
         else
         {
@@ -51,17 +54,5 @@ public class Colors : MonoBehaviour
                 music = false;
             }
         }
-
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            color = GetComponent<Renderer>().material.color;
-            Manager.selectedColor = this;
-            Debug.Log(Manager.selectedColor);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            GetComponent<AudioSource>().Play();
-            Debug.Log("S");
-        }*/
     }
 }

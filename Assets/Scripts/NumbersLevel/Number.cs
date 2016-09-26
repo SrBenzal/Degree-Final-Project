@@ -23,6 +23,18 @@ public class Number : MonoBehaviour
                 Manager.checkSelected();
 
             }
+
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+				Manager.numberSelected = int.Parse(GetComponentInChildren<TextMesh>().text);
+				Manager.checkSelected();
+			}
+			if (Input.GetKeyDown(KeyCode.H))
+			{
+				if (!Manager.numbersPanels[int.Parse(this.GetComponentInChildren<TextMesh>().text)].GetComponent<AudioSource>().isPlaying)
+					Manager.numbersPanels[int.Parse(this.GetComponentInChildren<TextMesh>().text)].GetComponent<AudioSource>().Play();
+				music = true;
+			}
         }
         else
         {

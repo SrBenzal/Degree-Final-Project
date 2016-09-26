@@ -6,10 +6,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3B7E1181-0BFD-9A5C-5EF1-990F18095008}</ProjectGuid>
+    <ProjectGuid>{F721D65A-5773-0EE2-89B4-17F59E3A4FB2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -45,43 +45,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\KinectView\Scripts\BodySourceManager.cs" />
-     <Compile Include="Assets\KinectView\Scripts\BodySourceView.cs" />
-     <Compile Include="Assets\KinectView\Scripts\ColorSourceManager.cs" />
-     <Compile Include="Assets\KinectView\Scripts\ColorSourceView.cs" />
-     <Compile Include="Assets\KinectView\Scripts\DepthSourceManager.cs" />
-     <Compile Include="Assets\KinectView\Scripts\DepthSourceView.cs" />
-     <Compile Include="Assets\KinectView\Scripts\DisableOnStart.cs" />
-     <Compile Include="Assets\KinectView\Scripts\InfraredSourceManager.cs" />
-     <Compile Include="Assets\KinectView\Scripts\InfraredSourceView.cs" />
-     <Compile Include="Assets\KinectView\Scripts\MultiSourceManager.cs" />
-     <Compile Include="Assets\Scripts\AnimalsLevel\Animals.cs" />
-     <Compile Include="Assets\Scripts\AnimalsLevel\AnimalsLevelManager.cs" />
-     <Compile Include="Assets\Scripts\ColorsLevel\Colors.cs" />
-     <Compile Include="Assets\Scripts\ColorsLevel\ColorsLevelManager.cs" />
-     <Compile Include="Assets\Scripts\ColorsLevel\CreateColors.cs" />
-     <Compile Include="Assets\Scripts\ColorsLevel\Draw.cs" />
-     <Compile Include="Assets\Scripts\ColorsLevel\LevelManager.cs" />
-     <Compile Include="Assets\Scripts\NumbersLevel\Number.cs" />
-     <Compile Include="Assets\Scripts\NumbersLevel\NumbersLevelManager.cs" />
-     <Compile Include="Assets\Scripts\Player\ButtonClose.cs" />
-     <Compile Include="Assets\Scripts\Player\Player.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerShapes.cs" />
-     <Compile Include="Assets\Scripts\SelectLevelScene\Emphasis.cs" />
-     <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneAnimals.cs" />
-     <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneColors.cs" />
-     <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneNumbers.cs" />
-     <Compile Include="Assets\Scripts\SelectLevelScene\LoadSceneShapes.cs" />
-     <Compile Include="Assets\Scripts\SelectLevelScene\SelectLevel.cs" />
-     <Compile Include="Assets\Scripts\ShapesLevel\DiferentColorMaterial.cs" />
-     <Compile Include="Assets\Scripts\ShapesLevel\Drag.cs" />
-     <Compile Include="Assets\Scripts\ShapesLevel\Shapes.cs" />
-     <Compile Include="Assets\Scripts\ShapesLevel\ShapesLevelManager.cs" />
+     <Compile Include="Assets\Standard Assets\Editor\KinectCopyPluginDataHelper.cs" />
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.EditorTestsRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
